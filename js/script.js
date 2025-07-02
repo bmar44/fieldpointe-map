@@ -160,7 +160,7 @@ for (var i = 0; i < images.length; i++) {
     var image = images[i];
     var marker = L.marker([image.lat, image.lng]);
     // Use a class for styling the image instead of inline width
-    marker.bindPopup('<img src="' + image.src + '" class="popup-image"><br>' + image.caption);
+    marker.bindPopup('<a href="' + image.src + '" data-lightbox="fieldpointe-images" data-title="' + image.caption + '"><img src="' + image.src + '" class="popup-image"></a><br>' + image.caption);
     markers.push(marker);
 }
 
